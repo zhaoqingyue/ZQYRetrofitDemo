@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zqy.retrofitdemo.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:text="POST方式"
+        android:background="#B4B4B4"/>
+
+    <LinearLayout
+        android:id="@+id/ll_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_post"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_post"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingRight="5dp"
+            android:hint="请输入英文"/>
+
+        <Button
+            android:id="@+id/btn_post"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="翻译"/>
+
+        <TextView
+            android:id="@+id/tv_post_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:text=""
+            android:gravity="left|center_vertical"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_post"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:text="GET方式"
+        android:background="#B4B4B4"/>
+
+    <LinearLayout
+        android:id="@+id/ll_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_get"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_get"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请输入英文"
+            android:paddingRight="5dp"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/btn_get"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="GET"/>
+
+        <TextView
+            android:id="@+id/tv_get_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:text=""
+            android:gravity="left|center_vertical"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
