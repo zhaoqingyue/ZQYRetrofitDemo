@@ -6,7 +6,7 @@
 
 ----Retrofit是一个RESTful的网络请求框架（基于OkHttp），该网络请求的工作本质是OkHttp完成，而Retrofit仅负责网络请求接口的封装。
 
-----1.png
+![image](https://github.com/zhaoqingyue/ZQYRetrofitDemo/blob/master/img/1.png)
 
 - App应用程序通过Retrofit请求网络，实际上是使用Retrofit接口层封装请求参数、Header、url等信息，然后由OkHttp完成后续的请求操作；
 - 在服务端返回数据之后，OkHttp将原始的结果交给Retrofit，Retrofit根据用户的需求对结果进行解析。
