@@ -2,7 +2,7 @@
 
 ----Square出品
 
-### 1. 介绍：
+### 1. 介绍
 
 ----Retrofit是一个RESTful的网络请求框架（基于OkHttp），该网络请求的工作本质是OkHttp完成，而Retrofit仅负责网络请求接口的封装。
 
@@ -11,39 +11,42 @@
 - App应用程序通过Retrofit请求网络，实际上是使用Retrofit接口层封装请求参数、Header、url等信息，然后由OkHttp完成后续的请求操作；
 - 在服务端返回数据之后，OkHttp将原始的结果交给Retrofit，Retrofit根据用户的需求对结果进行解析。
 
-### 3. 功能：
+### 2. 功能
 - 基于OkHttp & 遵循RESTful API设计风格；
 - 通过注解配置网络请求参数；
 - 支持同步 & 异步网络请求；
 - 支持多种数据的解析 & 序列化格式（Gson、Json、XML）
 - 提供对RxJava支持。
 
-### 4. 优点：
+### 3. 优点
 - 功能强大：支持同步 & 异步、支持支持多种数据的解析 & 序列化格式、支持RxJava；
 - 简洁易用：通过注解配置网络请求参数、采用大量设计模式简化使用；
 - 可拓展性好：功能模块高度封装、解耦彻底，如自定义Converters等。
 
-### 5. 应用场景：
+### 4. 应用场景
 
 ----任何网络请求的需求。
 
-### 6. 使用介绍：
+### 5. 使用介绍
 ----使用Retrofit共有7步。
 
 **（1）添加Retrofit库的依赖；**
 
-A. 在build.gradle添加Retrofit库的依赖：
-
+- A. 在build.gradle添加Retrofit库的依赖：
 ```
 dependencies {
-    // Retrofit库
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
-  }
+}
 ```
-B. 在AndroidManifest.xml添加网络权限：
 
+- B. 在AndroidManifest.xml添加网络权限：
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
+```
+
+- C. 添加响应转换器依赖：
+```
+compile 'com.squareup.retrofit2:converter-gson:2.1.0'
 ```
 
 **（2）创建接收服务器返回的数据类；**
@@ -129,4 +132,11 @@ Response<Reception> response = call.execute();
 // 对返回数据进行处理
 response.body().show();
 ```
+
+### 6. 注解
+
+- [网络请求方法](https://github.com/zhaoqingyue/ZQYAndroidNotes/blob/master/%E7%BD%91%E7%BB%9C%E6%A1%86%E6%9E%B6/Retrofit%E6%B3%A8%E8%A7%A3-%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95.md)
+- [网络请求参数](https://github.com/zhaoqingyue/ZQYAndroidNotes/blob/master/%E7%BD%91%E7%BB%9C%E6%A1%86%E6%9E%B6/Retrofit%E6%B3%A8%E8%A7%A3-%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0.md)
+- [标记](https://github.com/zhaoqingyue/ZQYAndroidNotes/blob/master/%E7%BD%91%E7%BB%9C%E6%A1%86%E6%9E%B6/Retrofit%E6%B3%A8%E8%A7%A3-%E6%A0%87%E8%AE%B0.md)
+
 
